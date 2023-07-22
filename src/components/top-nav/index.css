@@ -1,0 +1,40 @@
+.topnav-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  height: 90px;
+}
+
+.topnav-titre {
+  display: flex;
+  align-items: center;
+  color: var(--rouge);
+}
+
+.topnav-logo {
+  display: inline-flex;
+  max-height: 61px;
+}
+
+.topnav-nav {
+  width: 100%;
+}
+
+.topnav-list {
+  list-style: none;
+
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.topnav-list-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 24px;
+}
