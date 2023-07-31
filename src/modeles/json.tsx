@@ -54,6 +54,8 @@ interface UserAverageSessionJson {
 
 type KindValue = 'cardio' | 'energy' | 'endurance' | 'strength' | 'speed' | 'intensity';
 
+type KindKey = 1 | 2 | 3 | 4 | 5 | 6;
+
 interface KindJson {
  1: KindValue,
  2: KindValue,
@@ -65,7 +67,7 @@ interface KindJson {
 
 interface KindDataJson {
  value: number,
- kind: keyof KindJson
+ kind: KindKey
 }
 
 // export
@@ -75,4 +77,4 @@ interface UserPerformanceJson {
  data: KindDataJson[]
 }
 
-export type { UserInfosJson, KeyDataJson, UserJson, SessionActivityJson, UserActivityJson, UserAverageSessionJson, KindValue, UserPerformanceJson };
+export type { UserInfosJson, KeyDataJson, UserJson, SessionActivityJson, UserActivityJson, UserAverageSessionJson, KindValue, KindKey, KindJson, UserPerformanceJson };

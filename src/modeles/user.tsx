@@ -22,4 +22,4 @@ interface UserFormated {
  radar: RadarFormated
 }
 
-export type { UserFormated }
+export type { RadarFormated, UserFormated }
