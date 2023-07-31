@@ -1,8 +1,8 @@
+import { Outlet } from 'react-router-dom'
 import { LeftNav } from './components/left-nav'
 import { TopNav } from './components/top-nav'
 
 import './App.css'
-import { Dashboard } from './components/dashboard'
 
 const App = () => {
 
@@ -12,7 +12,7 @@ const App = () => {
         <TopNav />
         <div className={`app-container`}>
           <LeftNav />
-          <Dashboard />
+          <Outlet />
         </div>
       </div>
     </>

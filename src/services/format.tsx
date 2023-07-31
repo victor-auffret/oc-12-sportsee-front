@@ -1,9 +1,9 @@
-import { SessionActivityJson, UserAverageSessionJson, UserJson, UserPerformanceJson } from "../modeles/json";
+import { UserActivityJson, UserAverageSessionJson, UserJson, UserPerformanceJson } from "../modeles/json";
 import { RadarFormated, UserFormated } from "../modeles/user";
 
 function formatUser(
  json: UserJson,
- activity: SessionActivityJson[],
+ activity: UserActivityJson,
  average: UserAverageSessionJson,
  performance: UserPerformanceJson
 ): UserFormated {
@@ -14,7 +14,7 @@ function formatUser(
  if ("todayScore" in json) {
   score = json.todayScore;
  }
- const sessions = activity.map((v, i) => {
+ const sessions = activity.sessions.map((v, i) => {
   return {
    ...v,
    length: average.sessions[i]?.sessionLength ?? 0

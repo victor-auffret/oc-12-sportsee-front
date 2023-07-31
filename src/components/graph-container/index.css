@@ -1,0 +1,86 @@
+.graphcontainer-container {
+  min-height: 70vh;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  /*
+  grid-template-areas:
+    "quotidien quotidien quotidien alimentation"
+    "quotidien quotidien quotidien alimentation"
+    "session radar score alimentation"
+    "session radar score alimentation";
+    */
+
+  background-color: aqua;
+  gap: 30px;
+}
+
+.graphcontainer-group {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+
+.graphcontainer-activite {
+  background-color: red;
+}
+
+.graphcontainer-group-d3 {
+  background-color: chartreuse;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.graphcontainer-group-d3-item {
+  width: 265px;
+  height: 265px;
+  background-color: var(--gris-leger);
+  aspect-ratio: 1 / 1;
+}
+
+.graphcontainer-group-alimentation {
+  width: 260px;
+  height: 100%;
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.graphcontainer-group-alimentation-item {
+  width: 100%;
+  min-height: 125px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  background-color: var(--gris-leger);
+}
+
+.txt-gras {
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: #282d30;
+}
+
+.txt-alimentation {
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: #74798c;
+  /*
+font-family: Roboto;
+font-size: 20px;
+font-weight: 700;
+line-height: 24px;
+letter-spacing: 0px;
+text-align: left;*/
+}
