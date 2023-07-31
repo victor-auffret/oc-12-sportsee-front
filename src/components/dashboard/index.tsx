@@ -8,6 +8,7 @@ interface IProps {
 // TODO : utiliser recoil js pour un user global
 
 const Dashboard: FunctionComponent<IProps> = (props: IProps) => {
+
  return (<main className={`dashboard-container`}>
   <header>
    <h1>
