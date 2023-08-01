@@ -1,4 +1,4 @@
-import { UserActivityJson, UserAverageSessionJson, UserJson, UserPerformanceJson } from "../modeles/json";
+import { KindValue, UserActivityJson, UserAverageSessionJson, UserJson, UserPerformanceJson } from "../modeles/json";
 import { RadarFormated, UserFormated } from "../modeles/user";
 
 function formatUser(
@@ -19,6 +19,14 @@ function formatUser(
    ...v,
    length: average.sessions[i]?.sessionLength ?? 0
   }
+ }).sort((a, b) => {
+  if (a.day < b.day) {
+   return -1
+  }
+  if (a.day > b.day) {
+   return 1
+  }
+  return 0
  })
 
  let radar: RadarFormated = {
@@ -48,4 +56,33 @@ function formatUser(
  };
 }
 
-export { formatUser }
+function translateRadar(txt: KindValue | string): string {
+ switch (txt) {
+  case "cardio": return "Cardio";
+  case "endurance": return "Endurance";
+  case "energy": return "Energie";
+  case "intensity": return "Intensité";
+  case "speed": return "Vitesse";
+  case "strength": return "Force";
+  default: return txt;
+ }
+}
+
+function makeRadarData(radar: RadarFormated): any {
+
+ const fullMark = 300;
+ let data = [];
+ for (const [key, value] of Object.entries(radar)) {
+  let k = key as KindValue;
+  let v = Number(value) as number;
+  data.push({
+   "subject": translateRadar(k),
+   "A": v,
+   "fullMark": fullMark
+  })
+ }
+ data = data.reverse()
+ return data;
+}
+
+export { formatUser, translateRadar, makeRadarData }

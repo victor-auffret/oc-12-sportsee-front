@@ -1,6 +1,7 @@
 import { FunctionComponent } from 'react';
 import LogoSportSee from "../../assets/logo-avec-titre.svg"
 import "./index.css";
+import { NavLink } from 'react-router-dom';
 
 interface IProps {
 }
@@ -13,7 +14,7 @@ const TopNav: FunctionComponent<IProps> = (props: IProps) => {
      <img className={`topnav-logo`} src={LogoSportSee} alt={`logo sport see`} />
     </li>
     <li className={`topnav-list-item`}>
-     Accueil
+     <NavLink to={`/`}>Accueil</NavLink>
     </li>
     <li className={`topnav-list-item`}>
      Profil

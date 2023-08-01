@@ -100,6 +100,9 @@ th {
   --gris-d3: rgb(40, 45, 48);
   --gris-leger: rgb(251, 251, 251);
   --font-default: "Roboto", Arial, Helvetica, sans-serif;
+  --c-debut: red;
+  --c-fin: rgb(230, 0, 0);
+  --separation: 100%;
 }
 
 body {

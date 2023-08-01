@@ -10,7 +10,7 @@
     "session radar score alimentation";
     */
 
-  background-color: aqua;
+  /*background-color: aqua;*/
   gap: 30px;
 }
 
@@ -20,11 +20,14 @@
 }
 
 .graphcontainer-activite {
-  background-color: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--gris-leger);
 }
 
 .graphcontainer-group-d3 {
-  background-color: chartreuse;
+  /*background-color: chartreuse;*/
   display: flex;
   flex-direction: row;
   align-items: flex-end;
@@ -34,8 +37,47 @@
 .graphcontainer-group-d3-item {
   width: 265px;
   height: 265px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: var(--gris-leger);
+  box-shadow: 0px 2px 4px 0px #00000005;
+  border-radius: 10px;
   aspect-ratio: 1 / 1;
+}
+
+.graphcontainer-duree {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+
+  background: linear-gradient(
+    to right,
+    var(--c-debut),
+    var(--c-debut) var(--separation),
+    var(--c-fin) var(--separation),
+    var(--c-fin)
+  );
+}
+
+.graphcontainer-duree-title {
+  color: rgb(255, 128, 128);
+}
+
+.custom-tooltip {
+  padding: 10px;
+  background-color: #fff;
+  color: #000;
+}
+
+.graphcontainer-hexagone {
+  background-color: var(--gris-d3);
+  color: #fff;
+}
+
+line {
+  color: #fff;
 }
 
 .graphcontainer-group-alimentation {

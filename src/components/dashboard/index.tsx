@@ -34,33 +34,33 @@ const Dashboard: FunctionComponent<IProps> = (props: IProps) => {
 
  useEffect(() => {
   if (params.id) {
-   console.log("params id ", params.id)
+   //console.log("params id ", params.id)
    const redirect = () => { navigate("/404") }
 
    const resolveUser = (v: any) => {
     const userJson = v.data as UserJson
-    console.log("userJson", userJson)
+    //console.log("userJson", userJson)
     setUserJson(userJson)
    }
    Api.getUser(params.id, resolveUser, redirect)
 
    const resolveActivity = (v: any) => {
     const activity = v.data as UserActivityJson
-    console.log("UserActivityJson", activity)
+    //console.log("UserActivityJson", activity)
     setUserActivityJson(activity)
    }
    Api.getUserActivity(params.id, resolveActivity, redirect)
 
    const resolveAverage = (v: any) => {
     const average = v.data as UserAverageSessionJson
-    console.log("UserAverageSessionJson", average)
+    //console.log("UserAverageSessionJson", average)
     setUserAverageSessionJson(average)
    }
    Api.getUserAverageSession(params.id, resolveAverage, redirect)
 
    const resolvePerformance = (v: any) => {
     const performance = v.data as UserPerformanceJson
-    console.log("UserPerformanceJson", performance)
+    //console.log("UserPerformanceJson", performance)
     setUserPerformanceJson(performance)
    }
    Api.getUserPerformance(params.id, resolvePerformance, redirect)
@@ -71,7 +71,7 @@ const Dashboard: FunctionComponent<IProps> = (props: IProps) => {
  useEffect(() => {
   if (userJson != null && userActivityJson != null && userAverageSessionJson != null && userPerformanceJson != null) {
    const userOk = formatUser(userJson, userActivityJson, userAverageSessionJson, userPerformanceJson)
-   console.log("USER OK  : ", userOk)
+   //console.log("USER OK  : ", userOk)
    setUser(userOk)
   }
  }, [userJson, userActivityJson, userAverageSessionJson, userPerformanceJson])
