@@ -1,6 +1,7 @@
 import { KindValue, UserActivityJson, UserAverageSessionJson, UserJson, UserPerformanceJson } from "../modeles/json";
 import { RadarFormated, UserFormated } from "../modeles/user";
 
+// paramètres null valides pour retourner un objet avec certains graphiques vides
 function formatUser(
  json: UserJson,
  activity: UserActivityJson,

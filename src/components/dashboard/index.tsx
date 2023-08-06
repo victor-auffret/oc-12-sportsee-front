@@ -69,6 +69,7 @@ const Dashboard: FunctionComponent<IProps> = (props: IProps) => {
 
 
  useEffect(() => {
+  // tester graphique vide
   if (userJson != null && userActivityJson != null && userAverageSessionJson != null && userPerformanceJson != null) {
    const userOk = formatUser(userJson, userActivityJson, userAverageSessionJson, userPerformanceJson)
    //console.log("USER OK  : ", userOk)
