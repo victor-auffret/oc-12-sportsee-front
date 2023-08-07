@@ -68,8 +68,7 @@ const GraphContainer: FunctionComponent<IProps> = (props: IProps) => {
           margin={{ top: 15, left: 5, right: 5, bottom: 15 }}
         />
 
-        <YAxis dataKey="Calories Brulées (Kcal)" hide={false} />
-
+        <YAxis dataKey="Poids (kg)" orientation='right' hide={false} />
         <Bar dataKey="Poids (kg)" fill="#282D30" shape={<CustomBar />} />
         <Bar dataKey="Calories Brulées (Kcal)" fill="#ff0101" shape={<CustomBar />} />
       </BarChart>)
@@ -135,15 +134,16 @@ const GraphContainer: FunctionComponent<IProps> = (props: IProps) => {
 
       }
 
-      return <LineChart width={250} height={200} data={data} margin={{ top: 5, right: 30, left: 20, bottom: 5 }} onMouseMove={moveColor}>
-        <XAxis dataKey="name" fill={`#FF8282`} />
-        <Tooltip
-          formatter={(val, name, prop) => { return [`${val} mins`, "", ""] }}
-          payload={[{ name: "", value: "", unit: "" }]}
-          content={<CustomTooltip />}
-        />
-        <Line type="monotone" dataKey="avg" stroke="#fff" />
-      </LineChart>
+      return (
+        <LineChart width={250} height={200} data={data} margin={{ top: 5, right: 30, left: 20, bottom: 5 }} onMouseMove={moveColor}>
+          <XAxis dataKey="name" fill={`#FF8282`} />
+          <Tooltip
+            formatter={(val, name, prop) => { return [`${val} mins`, "", ""] }}
+            payload={[{ name: "", value: "", unit: "" }]}
+            content={<CustomTooltip />}
+          />
+          <Line type="monotone" dataKey="avg" stroke="#fff" />
+        </LineChart>)
     }
     return null
   }, [props.user])

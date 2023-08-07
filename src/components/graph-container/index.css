@@ -40,14 +40,12 @@
   letter-spacing: 0px;
   text-align: center;
 }
-
+/*
 .recharts-layer,
 .recharts-bar-rectangle,
 .recharts-rectangle {
-  border: solid 1px transparent !important;
-  border-top-left-radius: 50% !important;
-  border-top-right-radius: 50% !important;
-}
+  fill: green;
+}*/
 
 .graphcontainer-group-d3 {
   /*background-color: chartreuse;*/
