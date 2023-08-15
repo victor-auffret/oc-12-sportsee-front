@@ -35,7 +35,7 @@ const Dashboard: FunctionComponent<IProps> = (props: IProps) => {
  useEffect(() => {
   if (params.id) {
    //console.log("params id ", params.id)
-   const redirect = () => { navigate("/404") }
+   const redirect = (msg: string) => { navigate("/404") }
 
    const resolveUser = (v: any) => {
     const userJson = v.data as UserJson

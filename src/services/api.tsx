@@ -15,7 +15,10 @@ class Api {
         if (r.ok) {
           return r.json()
         }
-        throw new Error("pas trouvé")
+        if (r.status == 404) {
+          throw new Error("pas trouvé")
+        }
+        throw new Error("serveur indisponible")
       })
       .then(r => resolve(r))
       .catch(reject)
@@ -27,7 +30,10 @@ class Api {
         if (r.ok) {
           return r.json()
         }
-        throw new Error("pas trouvé")
+        if (r.status == 404) {
+          throw new Error("pas trouvé")
+        }
+        throw new Error("serveur indisponible")
       })
       .then(r => resolve(r))
       .catch(reject)
@@ -39,7 +45,10 @@ class Api {
         if (r.ok) {
           return r.json()
         }
-        throw new Error("pas trouvé")
+        if (r.status == 404) {
+          throw new Error("pas trouvé")
+        }
+        throw new Error("serveur indisponible")
       })
       .then(r => resolve(r))
       .catch(reject)
@@ -51,7 +60,10 @@ class Api {
         if (r.ok) {
           return r.json()
         }
-        throw new Error("pas trouvé")
+        if (r.status == 404) {
+          throw new Error("pas trouvé")
+        }
+        throw new Error("serveur indisponible")
       })
       .then(r => resolve(r))
       .catch(reject)

@@ -17,7 +17,7 @@ const RadarDiag: FunctionComponent<IProps> = ({ radar }: IProps) => {
  const d = [10, 25, 50, 75, 100]
 
  return (
-  <ResponsiveContainer width="100%" height="100%">
+  <ResponsiveContainer>
    <RadarChart cx="50%" cy="50%" outerRadius="80%" data={data} >
     <PolarGrid polarRadius={d} fill={`#ffffff`} />
     <PolarAngleAxis dataKey="subject" fill={`#ffffff`} />

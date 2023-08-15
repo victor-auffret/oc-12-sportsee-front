@@ -1,5 +1,5 @@
 .dashboard-container {
-  padding: 100px;
+  padding: clamp(0, 7vw, 100px);
   padding-bottom: 0;
 }
 
