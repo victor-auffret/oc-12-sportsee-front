@@ -28,4 +28,8 @@ If you are developing a production application, we recommend updating the config
 
 ---
 
-# A UTILISER UNIQUEMENT EN VERSION DEV
+# A UTILISER UNIQUEMENT EN VERSION DEV (PAS BUILD)
+
+```bash
+   npm run dev
+```
