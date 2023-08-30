@@ -1,8 +1,13 @@
 .dashboard-container {
-  padding: clamp(0, 7vw, 100px);
-  padding-bottom: 0;
+	padding: clamp(0, 7vw, 100px);
+	padding-bottom: 0;
+}
+
+.dashboard-header {
+	padding-top: clamp(0px, 5vw, 80px);
+	padding-left: clamp(0px, 5vw, 80px);
 }
 
 .c-rouge {
-  color: var(--rouge);
+	color: var(--rouge);
 }

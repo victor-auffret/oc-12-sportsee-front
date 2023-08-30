@@ -1,4 +1,4 @@
 .app-container {
-  display: grid;
-  grid-template-columns: 117px auto;
+	display: grid;
+	grid-template-columns: 117px auto;
 }

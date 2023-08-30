@@ -80,11 +80,23 @@ const LineDiag: FunctionComponent<IProps> = ({ sessions }: IProps) => {
   })
     , [sessions])
 
+  const CustomTick = (props: any) => {
+    const { x, y, stroke, payload } = props;
+
+    return (
+      <g transform={`translate(${x},${y})`}>
+        <text x={0} y={0} dy={16} fontFamily='Roboto' textAnchor="end" fill="#FF8282" stroke={stroke}>
+          {payload.value[0]}
+        </text>
+      </g>
+    );
+  }
+
   return (
     <LineChart width={250} height={200} data={data} margin={{ top: 5, right: 30, left: 20, bottom: 5 }} onMouseMove={moveColor}>
-      <XAxis dataKey="name" fill={`#FF8282`} />
+      <XAxis dataKey="name" fill={`#FF8282`} stroke={`#FF8282`} tick={<CustomTick />} />
       <Tooltip
-        formatter={(val, name, prop) => { return [`${val} mins`, "", ""] }}
+        formatter={(val) => { return [`${val} mins`, "", ""] }}
         payload={[{ name: "", value: "", unit: "" }]}
         content={<CustomTooltip />}
       />

@@ -8,25 +8,32 @@ import "./index.css";
 interface IProps {
 }
 
-const LeftNav: FunctionComponent<IProps> = (props: IProps) => {
+const LeftNav: FunctionComponent<IProps> = (_: IProps) => {
  return (<aside className={`bg-noir leftnav-container`}>
-  <ul className={`leftnav-list`}>
-   <li className={`leftnav-item`}>
-    <img src={IconMeditation} alt={`meditation`} />
-   </li>
-   <li className={`leftnav-item`}>
-    <img src={IconNatation} alt={`natation`} />
-   </li>
-   <li className={`leftnav-item`}>
-    <img src={IconVelo} alt={`velo`} />
-   </li>
-   <li className={`leftnav-item`}>
-    <img src={IconAlter} alt={`alter`} />
-   </li>
-  </ul>
-  <p className={`leftnav-copy`}>
-   Copiryght, SportSee 2020
-  </p>
+
+  <div>
+   <ul className={`leftnav-list`}>
+    <li className={`leftnav-item`}>
+     <img src={IconMeditation} alt={`meditation`} />
+    </li>
+    <li className={`leftnav-item`}>
+     <img src={IconNatation} alt={`natation`} />
+    </li>
+    <li className={`leftnav-item`}>
+     <img src={IconVelo} alt={`velo`} />
+    </li>
+    <li className={`leftnav-item`}>
+     <img src={IconAlter} alt={`alter`} />
+    </li>
+   </ul>
+  </div>
+
+  <div>
+   <p className={`leftnav-copy`}>
+    Copiryght, SportSee 2020
+   </p>
+  </div>
+
  </aside>)
 }
 

@@ -6,7 +6,7 @@ import { NavLink } from 'react-router-dom';
 interface IProps {
 }
 
-const TopNav: FunctionComponent<IProps> = (props: IProps) => {
+const TopNav: FunctionComponent<IProps> = (_: IProps) => {
  return (<header className={`bg-noir topnav-container`}>
   <nav className={`topnav-nav`}>
    <ul className={`topnav-list`}>

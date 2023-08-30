@@ -19,7 +19,7 @@ interface IParams {
 
 // TODO : utiliser recoil js pour un user global
 
-const Dashboard: FunctionComponent<IProps> = (props: IProps) => {
+const Dashboard: FunctionComponent<IProps> = (_: IProps) => {
 
  const params: Partial<IParams> = useParams()
  //const logements: Logement[] = useLocations()
@@ -35,7 +35,7 @@ const Dashboard: FunctionComponent<IProps> = (props: IProps) => {
  useEffect(() => {
   if (params.id) {
    //console.log("params id ", params.id)
-   const redirect = (msg: string) => { navigate("/404") }
+   const redirect = (_: string) => { navigate("/404") }
 
    const resolveUser = (v: any) => {
     const userJson = v.data as UserJson
@@ -79,7 +79,7 @@ const Dashboard: FunctionComponent<IProps> = (props: IProps) => {
 
 
  return (<main className={`dashboard-container`}>
-  <header>
+  <header className={`dashboard-header`}>
    <h1>
     Bonjour <span className={`c-rouge`}>{user?.infos.firstName ?? "inconnu"}</span>
    </h1>
