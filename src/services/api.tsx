@@ -5,8 +5,6 @@ const ACTIONS = {
   PERFORMANCE: `performance`
 }
 
-// TODO : abort controller !!!
-
 class Api {
 
   static async getUser(id: number, resolve: (m: any) => void, reject: (m: any) => void) {

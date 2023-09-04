@@ -1,14 +1,17 @@
 import { FunctionComponent, useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-
-import { GraphContainer } from '../graph-container';
-
+//
 import type { UserFormated } from '../../modeles/user'
+import { UserActivityJson, UserAverageSessionJson, UserJson, UserPerformanceJson } from '../../modeles/json';
+//
+import { GraphContainer } from '../graph-container';
+import { formatUser } from '../../services/format';
+
+// pour désactiver les moock il faut commenter/dé-commanter la ligne correspondante
+// import { Api } from '../../services/api';
+import { MockApi as Api } from '../../services/mock';
 
 import "./index.css";
-import { formatUser } from '../../services/format';
-import { UserActivityJson, UserAverageSessionJson, UserJson, UserPerformanceJson } from '../../modeles/json';
-import { Api } from '../../services/api';
 
 interface IProps {
 }
@@ -35,32 +38,30 @@ const Dashboard: FunctionComponent<IProps> = (_: IProps) => {
  useEffect(() => {
   if (params.id) {
    //console.log("params id ", params.id)
-   const redirect = (_: string) => { navigate("/404") }
+   const redirect = (_: string) => {
+    navigate("/404")
+   }
 
    const resolveUser = (v: any) => {
     const userJson = v.data as UserJson
-    //console.log("userJson", userJson)
     setUserJson(userJson)
    }
    Api.getUser(params.id, resolveUser, redirect)
 
    const resolveActivity = (v: any) => {
     const activity = v.data as UserActivityJson
-    //console.log("UserActivityJson", activity)
     setUserActivityJson(activity)
    }
    Api.getUserActivity(params.id, resolveActivity, redirect)
 
    const resolveAverage = (v: any) => {
     const average = v.data as UserAverageSessionJson
-    //console.log("UserAverageSessionJson", average)
     setUserAverageSessionJson(average)
    }
    Api.getUserAverageSession(params.id, resolveAverage, redirect)
 
    const resolvePerformance = (v: any) => {
     const performance = v.data as UserPerformanceJson
-    //console.log("UserPerformanceJson", performance)
     setUserPerformanceJson(performance)
    }
    Api.getUserPerformance(params.id, resolvePerformance, redirect)

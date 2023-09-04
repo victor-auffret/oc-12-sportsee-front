@@ -71,24 +71,6 @@ const ActiviteDiag: FunctionComponent<IProps> = ({ sessions }: IProps) => {
 
     </ComposedChart>
   )
-  /*
- 
-  return (<BarChart width={750} height={250} barSize={7} data={data}>
-    <CartesianGrid strokeDasharray="3 3" />
-    <XAxis dataKey="day" />
-    <Tooltip content={<CustomTooltip />} />
-    <Legend
-      verticalAlign='top'
-      align='right'
-      iconType='circle'
-      iconSize={8}
-      margin={{ top: 15, left: 5, right: 5, bottom: 15 }}
-    />
- 
-    <YAxis dataKey="Calories Brulées (Kcal)" hide={true} />
-    <Bar dataKey="Poids (kg)" fill="#282D30" shape={<CustomBar />} />
-    <Bar dataKey="Calories Brulées (Kcal)" fill="#ff0101" shape={<CustomBar />} />
-  </BarChart>)*/
 
 }
 

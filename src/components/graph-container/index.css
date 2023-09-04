@@ -33,12 +33,6 @@
 	letter-spacing: 0px;
 	text-align: center;
 }
-/*
-.recharts-layer,
-.recharts-bar-rectangle,
-.recharts-rectangle {
-  fill: green;
-}*/
 
 .graphcontainer-group-d3 {
 	/*background-color: chartreuse;*/
@@ -132,12 +126,14 @@ line {
 	gap: 40px;
 	font-size: 32px;
 }
+
 .legend-kg {
-	color: red;
-}
-.legend-kcal {
 	color: black;
 }
+.legend-kcal {
+	color: red;
+}
+
 .legend-txt {
 	color: black;
 	font-family: Roboto;
